@@ -12,3 +12,10 @@ const sequenceSum = (begin, end, step) => {
   }
   return sum
 }
+
+//or
+
+const sequenceSum = (begin, end, step) => {
+  let arr = Array.from({length: (end - begin) / step + 1},(_, i) => begin + (i * step))
+  return arr.reduce((sum, curVal) => sum + curVal, 0)
+}
